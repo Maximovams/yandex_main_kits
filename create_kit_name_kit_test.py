@@ -18,8 +18,6 @@ def positive_assert(name):
     assert kit_response.status_code == 201
     assert kit_response.json()["name"] == kit_body["name"]
 
-
-
 def negative_assert(kit_body):
     kit_response = sender_stand_request.post_new_client_kit(kit_body)
     assert kit_response.status_code == 400
